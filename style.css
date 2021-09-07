@@ -61,7 +61,7 @@ header {
 
 .navbar.navbar-fixed-top {
   background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #ff5f6d 0%, #ffb270 100%) repeat scroll 0 0;
-  background: rgba(0, 0, 0, 0) linear-gradient(to right, #ff5f6d 0%, #ffb270 100%) repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #0049b8 0%, #7ceec2 100%) repeat scroll 0 0;
   box-shadow: 0 0 20px -10px #000;
   padding: 0;
 }
@@ -117,7 +117,7 @@ header {
 /* ============= 3. SLIDER AREA ============= */
 
 .hero-area {
-  background: rgba(0, 0, 0, 0) linear-gradient(to right, #ff5f6d 0%, #ffb270 100%) repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, #0049b8 0%, #7ceec2 100%) repeat scroll 0 0;
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -165,7 +165,7 @@ header {
 }
 
 .hero-btn {
-  background: #ff5f6d none repeat scroll 0 0;
+  background: #1ca4ff none repeat scroll 0 0;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
@@ -174,15 +174,15 @@ header {
   padding: 15px 50px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s ease 0s;
+  transition: all 0.4s ease 0s;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.1);
 }
 
 .hero-btn:hover, .about-content>.hero-btn:hover {
-  background-color: #f75160;
-  color: #fff;
+  background-color: #ffffff;
+  color: #1ca4ff;
   text-decoration: none;
 }
 
