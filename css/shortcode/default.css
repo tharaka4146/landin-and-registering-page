@@ -1206,11 +1206,11 @@ textarea:focus {
 }
 
 .bg-1 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/1.png") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/8.png") repeat scroll center center / cover;
 }
 
 .bg-2 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/2.png") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/2.jpg") repeat scroll center center / cover;
 }
 
 .bg-3 {
@@ -1218,11 +1218,11 @@ textarea:focus {
 }
 
 .bg-4 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/4.png") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/4.jpg") repeat scroll center center / cover;
 }
 
 .bg-5 {
-    background: rgba(0, 0, 0, 0) url("../../img/bg/5.png") repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url("../../img/bg/5.jpg") repeat scroll center center / cover;
 }
 
 .bg-6 {

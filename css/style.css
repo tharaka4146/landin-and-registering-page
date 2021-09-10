@@ -1,0 +1,20 @@
+.wrapper {
+  text-align: center;
+}
+
+.time {
+  color: #999999;
+  font-size: 6em;
+}
+
+.label {
+  font-size: 1em;
+  display: block;
+  color: #aaa;
+  margin-top: 10%;
+}
+
+.bg {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+}

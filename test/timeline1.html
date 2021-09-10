@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type=""
+        href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+        color="#111" />
+
+
+    <title>CodePen - Vertical dark timeline</title>
+
+
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Niramit:300,300i,700");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "K2D", sans-serif;
+            background: #1e1e2f;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 50px auto;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 1.5;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 4rem;
+            margin: 0 0 0 30px;
+            color: white;
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #27293d;
+        }
+
+        .timeline .timeline-container {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline .timeline-container .timeline-icon {
+            position: absolute;
+            left: -88px;
+            top: 4px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 2rem;
+            background: #4f537b;
+        }
+
+        .timeline .timeline-container .timeline-icon i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .timeline .timeline-container .timeline-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .timeline .timeline-container .timeline-body {
+            background: #27293d;
+            border-radius: 3px;
+            padding: 20px 20px 15px;
+            box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline .timeline-container .timeline-body:before {
+            content: "";
+            background: inherit;
+            width: 20px;
+            height: 20px;
+            display: block;
+            position: absolute;
+            left: -10px;
+            transform: rotate(45deg);
+            border-radius: 0 0 0 2px;
+        }
+
+        .timeline .timeline-container .timeline-body .timeline-title {
+            margin-bottom: 1.4rem;
+        }
+
+        .timeline .timeline-container .timeline-body .timeline-title .badge {
+            background: #4f537b;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .timeline .timeline-container .timeline-body .timeline-subtitle {
+            font-weight: 300;
+            font-style: italic;
+            opacity: 0.4;
+            margin-top: 16px;
+            font-size: 11px;
+        }
+
+        .timeline .timeline-container.primary .badge,
+        .timeline .timeline-container.primary .timeline-icon {
+            background: #1d8cf8 !important;
+        }
+
+        .timeline .timeline-container.info .badge,
+        .timeline .timeline-container.info .timeline-icon {
+            background: #11cdef !important;
+        }
+
+        .timeline .timeline-container.success .badge,
+        .timeline .timeline-container.success .timeline-icon {
+            background: #00bf9a !important;
+        }
+
+        .timeline .timeline-container.warning .badge,
+        .timeline .timeline-container.warning .timeline-icon {
+            background: #ff8d72 !important;
+        }
+
+        .timeline .timeline-container.danger .badge,
+        .timeline .timeline-container.danger .timeline-icon {
+            background: #fd5d93 !important;
+        }
+
+        .author {
+            font-family: inherit;
+            padding: 3em;
+            text-align: center;
+            width: 100%;
+            color: white;
+        }
+
+        .author a:link,
+        .author a:visited {
+            color: white;
+        }
+
+        .author a:link:hover,
+        .author a:visited:hover {
+            text-decoration: none;
+        }
+
+        .author .btn:link,
+        .author .btn:visited {
+            margin-top: 1em;
+            text-decoration: none;
+            display: inline-block;
+            font-family: inherit;
+            font-weight: 100;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            background-color: black;
+            padding: 1.5em 2rem;
+            border-radius: 1em;
+            transition: 0.5s all;
+        }
+
+        .author .btn:link:hover,
+        .author .btn:link:focus,
+        .author .btn:link:active,
+        .author .btn:visited:hover,
+        .author .btn:visited:focus,
+        .author .btn:visited:active {
+            background-color: #1a1a1a;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+
+</head>
+
+<body translate="no">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vertical Dark Timeline</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline-container primary">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-wink"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Primary</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam
+                            earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos.
+                            Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">1 Hours Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container danger">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-hearts"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Danger</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam
+                            earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos.
+                            Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">2 Hours Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container success">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-tears"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Success</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam
+                            earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos.
+                            Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">6 Hours Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container warning">
+                    <div class="timeline-icon">
+                        <i class="far fa-grimace"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Warning</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam
+                            earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos.
+                            Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">1 Day Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin-beam-sweat"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Secondary</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam
+                            earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos.
+                            Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">3 Days Ago</p>
+                    </div>
+                </div>
+                <div class="timeline-container info">
+                    <div class="timeline-icon">
+                        <i class="far fa-grin"></i>
+                    </div>
+                    <div class="timeline-body">
+                        <h4 class="timeline-title"><span class="badge">Info</span></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam necessitatibus numquam
+                            earum ipsa fugiat veniam suscipit, officiis repudiandae, eum recusandae neque dignissimos.
+                            Cum fugit laboriosam culpa, repellendus esse commodi deserunt.</p>
+                        <p class="timeline-subtitle">4 Days Ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <section class="author">
+        <p>Created by: <a href="https://responsivemart.com" target="_blank" title="ResponsiveMart">ResponsiveMart</a>
+        </p>
+        <a href="https://responsivemart.com/product/vertical-dark-timeline/" target="_blank" class="btn">Download Source
+            Code</a>
+    </section>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>CodePen - Simple responsive vertical timeline with css</title>
+
+    <link rel="stylesheet" media="screen" href="timeline.css" />
+
+
+    <style>
+        html {
+            font-size: 15px;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .referer-warning {
+            background: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 0.75em;
+            color: white;
+            text-align: center;
+            font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+            line-height: 1.2;
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .referer-warning h1 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .referer-warning a {
+            color: #56bcf9;
+        }
+
+        /* $linkColorOnBlack */
+    </style>
+</head>
+
+<body class="">
+
+
+    <div id="result-iframe-wrap" role="main">
+
+        <iframe id="result" srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+
+  <meta charset=&quot;UTF-8&quot;>
+  
+<link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+<meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+<link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+<link rel=&quot;mask-icon&quot; type=&quot;&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg&quot; color=&quot;#111&quot; />
+
+
+  <title>CodePen - Simple responsive vertical timeline with css</title>
+  
+  <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&quot;>
+
+  
+  
+<style>
+* {
+   box-sizing: border-box;
+   outline: none;
+}
+
+body {
+   margin: 0;
+   padding: 30px 0;
+   font-family: 'Roboto', sans-serif;
+   background: #F1F2F6;
+}
+
+h1 {
+   text-align: center;
+   font-weight: 300;
+   color: #777
+}
+
+h1 span {
+   font-weight: 600;
+}
+
+.container {
+   width: 80%;
+   padding: 50px 0;
+   margin: 50px auto;
+   position: relative;
+   overflow: hidden;
+}
+
+.container:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 50%;
+   margin-left: -1px;
+   width: 2px;
+   height: 100%;
+   background: #CCD1D9;
+   z-index: 1
+}
+
+.timeline-block {
+   width: calc(50% + 8px);
+   display: flex;
+   justify-content: space-between;
+   clear: both;
+}
+
+.timeline-block-right {
+   float: right;
+}
+
+.timeline-block-left {
+   float: left;
+   direction: rtl
+}
+
+.marker {
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   border: 2px solid #F5F7FA;
+   background: #4FC1E9;
+   margin-top: 10px;
+   z-index: 9999
+}
+
+.timeline-content {
+   width: 95%;
+   padding: 0 15px;
+   color: #666
+}
+
+.timeline-content h3 {
+   margin-top: 5px;
+   margin-bottom: 5px;
+   font-size: 25px;
+   font-weight: 500
+}
+
+.timeline-content span {
+   font-size: 15px;
+   color: #a4a4a4;
+}
+
+.timeline-content p {
+   font-size: 14px;
+   line-height: 1.5em;
+   word-spacing: 1px;
+   color: #888;
+}
+
+
+@media screen and (max-width: 768px) {
+   .container:before {
+      left: 8px;
+      width: 2px;
+   }
+   .timeline-block {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+   .timeline-block-right {
+      float: none;
+   }
+
+   .timeline-block-left {
+      float: none;
+      direction: ltr;
+   }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+
+
+</head>
+
+<body translate=&quot;no&quot; >
+  <h1>Pure Css responsive <span>timeline</span></h1>
+
+<div class=&quot;container&quot;>
+
+   <div class=&quot;timeline-block timeline-block-right&quot;>
+      <div class=&quot;marker&quot;></div>
+      <div class=&quot;timeline-content&quot;>
+         <h3>First Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class=&quot;timeline-block timeline-block-left&quot;>
+      <div class=&quot;marker&quot;></div>
+      <div class=&quot;timeline-content&quot;>
+         <h3>Seconed Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class=&quot;timeline-block timeline-block-right&quot;>
+      <div class=&quot;marker&quot;></div>
+      <div class=&quot;timeline-content&quot;>
+         <h3>Third Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class=&quot;timeline-block timeline-block-left&quot;>
+      <div class=&quot;marker&quot;></div>
+      <div class=&quot;timeline-content&quot;>
+         <h3>Fourth Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+
+   <div class=&quot;timeline-block timeline-block-right&quot;>
+      <div class=&quot;marker&quot;></div>
+      <div class=&quot;timeline-content&quot;>
+         <h3>Fifth Year</h3>
+         <span>Some work experience</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+   </div>
+</div>
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
+" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation  allow-scripts allow-top-navigation-by-user-activation"
+            allow="accelerometer; camera; encrypted-media; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write"
+            allowTransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+        </iframe>
+
+    </div>
+</body>
+
+</html>

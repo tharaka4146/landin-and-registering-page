@@ -4,6 +4,11 @@
 <!-- Mirrored from preview.hasthemes.com/moto/animate-text-video-bg.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Sep 2021 18:18:52 GMT -->
 
 <head>
+
+	<link rel='stylesheet' href='bootstrap.css'>
+	<link rel="stylesheet" media="screen" href="css/timeline3.css" />
+
+
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Moto - App Landing Page</title>
@@ -12,6 +17,13 @@
 
 	<link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png">
 	<!-- Place favicon.ico in the root directory -->
+
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- all css here -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,6 +38,252 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		html,
+		body {
+			font: 100% "Lato", sans-serif;
+			/* font-weight: 300; */
+			/* height: 100%; */
+			/* background-color: #4D4545; */
+		}
+
+		/* .blue-bg {
+            background-color: #4D4545;
+            color: #ED8D8D;
+            height: 100%;
+        } */
+
+		.circle {
+			font-weight: bold;
+			padding: 15px 20px;
+			border-radius: 50%;
+			background-color: #187F4F;
+			color: white;
+			max-height: 50px;
+			z-index: 2;
+		}
+
+		/* .how-it-works.row {
+            display: flex;
+        } */
+
+		.how-it-works.row .col-2 {
+			display: inline-flex;
+			align-self: stretch;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.how-it-works.row .col-2::after {
+			content: "";
+			position: absolute;
+			border-left: 3px solid #187F4F;
+			z-index: 1;
+		}
+
+		.how-it-works.row .col-2.bottom::after {
+			height: 50%;
+			left: 50%;
+			top: 50%;
+		}
+
+		.how-it-works.row .col-2.full::after {
+			height: 100%;
+			left: calc(50% - 3px);
+		}
+
+		.how-it-works.row .col-2.top::after {
+			height: 50%;
+			left: 50%;
+			top: 0;
+		}
+
+		.timeline div {
+			padding: 0;
+			height: 40px;
+		}
+
+		.timeline hr {
+			border-top: 3px solid #187F4F;
+			margin: 0;
+			top: 17px;
+			position: relative;
+		}
+
+		.timeline .col-2 {
+			display: flex;
+			overflow: hidden;
+		}
+
+		.timeline .corner {
+			border: 3px solid #187F4F;
+			width: 100%;
+			position: relative;
+			border-radius: 15px;
+		}
+
+		.timeline .top-right {
+			left: 50%;
+			top: -50%;
+		}
+
+		.timeline .left-bottom {
+			left: -50%;
+			padding-right: -90%;
+			top: calc(50% - 3px);
+		}
+
+		.timeline .top-left {
+			left: -50%;
+			top: -50%;
+		}
+
+		.timeline .right-bottom {
+			left: 50%;
+			top: calc(50% - 3px);
+		}
+
+		.about-content {
+			text-align: center;
+		}
+
+		@media screen and (min-width: 600px) {
+			.details {
+				visibility: hidden;
+				clear: both;
+				float: left;
+				margin: 10px auto 5px 20px;
+				width: 28%;
+				display: none;
+			}
+
+			.speaker-image {
+				margin-left: 25%;
+				padding: 0%;
+
+			}
+
+
+			.lap-image {
+				margin-left: 25%;
+			}
+
+			.about-content {
+				text-align: left;
+			}
+		}
+
+
+
+		.details2 {
+			color: white;
+			font-size: 17px;
+		}
+
+		html {
+			scroll-behavior: smooth;
+			/* overflow: scroll; */
+
+		}
+
+		/* ::-webkit-scrollbar {
+			display: none;
+		} */
+		/* Scrollbar */
+		::-webkit-scrollbar {
+			width: 10px;
+			height: 10px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #C1C1C1;
+			border-radius: 12px;
+			transition: all 0.15s ease-in-out;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(157, 157, 154, 1);
+		}
+
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+	</style>
+
+	<style id="compiled-css" type="text/css">
+		#headerPopup {
+			width: 50%;
+			margin: 0 auto;
+		}
+
+		#headerPopup iframe {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		/* EOS */
+	</style>
+
+
+	<style id="compiled-css" type="text/css">
+		/*
+    /* Timeline holder */
+		ul.timeline {
+			list-style-type: none;
+			position: relative;
+			padding-left: 1.5rem;
+		}
+
+		/* Timeline vertical line */
+		ul.timeline:before {
+			content: ' ';
+			background: rgb(0, 241, 60);
+			display: inline-block;
+			position: absolute;
+			left: 16px;
+			width: 4px;
+			height: 100%;
+			z-index: 400;
+			border-radius: 1rem;
+		}
+
+		li.timeline-item {
+			margin: 20px 0;
+		}
+
+		/* Timeline item arrow */
+		.timeline-arrow {
+			border-top: 0.5rem solid transparent;
+			border-right: 0.5rem solid #fff;
+			border-bottom: 0.5rem solid transparent;
+			display: block;
+			position: absolute;
+			left: 2rem;
+		}
+
+		/* Timeline item circle marker */
+		li.timeline-item::before {
+			content: ' ';
+			background: rgb(12, 141, 61);
+			display: inline-block;
+			position: absolute;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			left: 11px;
+			width: 14px;
+			height: 14px;
+			z-index: 400;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		}
+
+		.text-gray {
+			color: #999;
+		}
+
+		/* EOS */
+	</style>
 </head>
 
 <body>
@@ -44,18 +302,23 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#"><img src="img/icon/logo.png" alt="logo" class="img-responsive"></a>
+					<a class="navbar-brand" href="#" style="color: white; font-weight: 700;">IEEE</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navigation">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#slider-area">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#features">Features</a></li>
-						<li><a href="#pricing">Pricing</a></li>
-						<li><a href="#client">Client</a></li>
-						<li><a href="#team">Team</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a class="download-btn" href="#contact-area">Download</a></li>
+						<li onclick="scrollTo2('slider-area')"><a class="active sliderClass" href="#slider-area"
+								style="pointer-events: none;">Home</a></li>
+						<li onclick="scrollTo2('about')"><a class="aboutClass" href="#about"
+								style="pointer-events: none;">About</a></li>
+						<li onclick="scrollTo2('features')"><a class="featuresClass" href="#features"
+								style="pointer-events: none;">Countdown</a></li>
+						<li onclick="scrollTo2('schedule')"><a class="scheduleClass" href="#schedule"
+								style="pointer-events: none;">Schedule</a></li>
+						<li onclick="scrollTo2('speaker')"><a class="speakerClass" href="#speaker"
+								style="pointer-events: none;">Speaker</a></li>
+						<li onclick="scrollTo2('contact')"><a class="constactClass" href="#contact"
+								style="pointer-events: none;">Contact Us</a></li>
+						<li><a class="download-btn" href="#contact-area">Register now</a></li>
 					</ul>
 				</div>
 			</div>
@@ -69,15 +332,14 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="hero-text">
-							<h1 class="title2 cd-headline clip is-full-width">INTELLECTO<br>
+							<h1 class="title2 cd-headline clip is-full-width">DEVZONE<br>
 								<span class="cd-words-wrapper">
-									<b class="is-visible"> REGISTER TODAY </b>
-									<b>REGISTER NOW</b>
+									<b class="is-visible" style="font-size: 90%;"> REGISTER TODAY </b>
+									<b style="font-size: 90%;">REGISTER NOW</b>
 								</span>
 							</h1>
-							<p class="he-p">Nulla aliquet, erat a egestas lacinia, leo libero dapibus nisl, quis
-								pulvinar dolor justo id turpis. Nulla odio orci.</p>
-							<a href="#" class="hero-btn">Register</a>
+							<p class="he-p">BUILD &#183; TEST &#183; DEPLOY</p>
+							<a href="#" class="hero-btn">Register now</a>
 
 							<!--
 							<div class="download-option-btn text-center">
@@ -95,105 +357,108 @@
 		</div>
 	</div>
 	<!--  hero area end -->
-	<!-- Feature area start -->
-	<section id="features" class="feature-area gray-bg pt-128 pb-70">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-sm-12">
-					<div class="section-heading pb-55 text-center">
-						<h2>SESSION 04 WILL START IN</h2>
-						<p style="font-size: 500%; margin-top: 20%; margin-bottom: 20%;">00 00 00 00</p>
-						<a href="#" class="hero-btn">Register</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Feature feature area end -->
 
 	<!-- About area start -->
-	<section id="about" class="about-area pt-125">
+	<section id="about" class="about-area pt-125" style="padding-bottom: 5%;">
 		<div class="container">
-			<div class="row">
+			<div class="row" style=" display: flex; justify-content: center; align-items: center; ">
 				<div class="col-md-6">
 					<div class="about-content">
-						<h2>About Intellecto</h2>
-						<p>"Knowledge without application is Worthless" Having the knowledge of programming
-							theories and
-							concepts is important but do you know how to put those into practice in the industry? Even
-							so, did you know Java is often the default choice of programmers? Combining the art of
-							coding with Java, we bring you Intellecto 1.0 - a Java workshop series with its applications
-							in the real world to add worth to your programming knowledge. Your brain is right where your
-							code lives. And to grok what it does, you need to rewire your brain to see the Java world in
-							a new light. So we’re here to help you flip the switch! Stay tuned with us for a whole new
-							experience with Java programming.</p>
-						<p>overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische zetting. Het is in
-							de jaren '60 populair geworden met de introductie vanlad Letraset velle met Lorem Ipsum
-							passages.</p>
-						<a class="hero-btn video-popup" href="https://youtu.be/3b83GFJoHqM"><i
-								class="icofont icofont-play-alt-2"></i> Watch Our Video</a>
+						<h2>Why Devzone</h2>
+						<p>DevOps is not a Goal, But a never-ending process of continual improvement.
+							DevOps simply adds the idea that small, cross-functional teams should own the entire
+							delivery
+							process from concept through user feedback and production monitoring.
+							Set of practices that leads to the combination of software development and IT operations. Do
+							you know where to get this knowledge from, to work in the industry? Well, the DevZone will
+							help
+							you with it, as it focuses on the IT Infrastructure aspects and provides you with the basic
+							knowledge about DevOps that will give you great benefits in the upcoming future.
+							Stay tuned with us for a whole new experience with DevOps, the one most responsive to
+							change.
+						</p>
+						<a class="hero-btn video-popup" href="#headerPopup" id="headerVideoLink" target="_blank"
+							class="btn btn-outline-danger popup-modal"><i class="icofont icofont-play-alt-2"></i>
+							Watch Our Video</a>
+
+						<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/IfrfJn_-24g"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="about-img">
-						<img src="img/other/about.png" alt="" />
+						<img class="lap-image" src="img/other/about4.png" alt="" />
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- About area End -->
-	<!-- service area start -->
-	<section class="service-area" style="margin-bottom: 1%;">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="single-service">
-						<div class="service-icon">
-							<img src="img/icon/service-icon-1.png" alt="">
-						</div>
-						<div class="service-content">
-							<h2>Best Industry Experts</h2>
-							<p>Lorem Ipsum is slechts een preksts uit het drukkerij- en zetterija Lorem Ipsum is de
-								stan.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="single-service">
-						<div class="service-icon">
-							<img src="img/icon/service-icon-2.png" alt="">
-						</div>
-						<div class="service-content">
-							<h2>Learn Java Online</h2>
-							<p>Lorem Ipsum is slechts een preksts uit het drukkerij- en zetterija Lorem Ipsum is de
-								stan.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 hidden-sm">
-					<div class="single-service">
-						<div class="service-icon">
-							<img src="img/icon/service-icon-3.png" alt="">
-						</div>
-						<div class="service-content">
-							<h2>Four Workshop Sessions</h2>
-							<p>Lorem Ipsum is slechts een preksts uit het drukkerij- en zetterija Lorem Ipsum is de
-								stan.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- service area start -->
 	<!-- Feature area start -->
 	<section id="features" class="feature-area gray-bg pt-128 pb-70">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
 					<div class="section-heading pb-55 text-center">
-						<h2>Best Features</h2>
+						<h2>Session one will start in</h2>
+						<!-- <p style="font-size: 500%; margin-top: 20%; margin-bottom: 20%;">00 00 00 00</p> -->
+						<div id="countdown" class="row justify-content-center align-items-center"
+							style="margin-top: 10%; margin-bottom: 10%; "></div>
+						<a href="#" class="hero-btn">Register Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Feature feature area end -->
+	<!-- service area start -->
+	<section id="" class="service-area" style="margin-bottom: 1%; margin-top: 2%;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="single-service" style="padding: 10%;">
+						<center>
+							<div class="service-content">
+								<h2>Session 01</h2>
+								<p>What is exactly DevOps?</p>
+								<p>How devops is important for an organization</p>
+								<p>What is the DevOps life cycle?</p>
+								<p>The infrastructure as code in devops</p>
+								<p>Benefits gained by learning devops</p>
+							</div>
+						</center>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6">
+					<div class="single-service" style="padding: 10%;">
+						<center>
+							<div class="service-content">
+								<h2>Session 02</h2>
+								<p>Learn DevOps on AWS/GCP/Azure</p>
+								<p>Learn about the 6 DevOps principles</p>
+								<p>Learn about DevOps practices</p>
+								<p>Get to know about the future of devops</p>
+								<p>&nbsp</p>
+							</div>
+						</center>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- service area start -->
+	<!-- Feature area start -->
+	<section id="" class="feature-area gray-bg pt-128 pb-70">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+					<div class="section-heading pb-55 text-center">
+						<h2>What you get</h2>
 						<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de
 							standaard proeftekst in deze bedrijfstak sinds.</p>
 					</div>
@@ -203,10 +468,10 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="awesome-feature text-center">
 						<div class="awesome-feature-icon">
-							<span><i class="icofont icofont-alarm"></i></span>
+							<span><i class="icofont icofont-badge"></i></span>
 						</div>
 						<div class="awesome-feature-details">
-							<h5>Notification Viewing</h5>
+							<h5>Best industry experts</h5>
 							<p>To learn how to implement Object-Oriented Designs with Java
 							</p>
 						</div>
@@ -215,10 +480,10 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="awesome-feature text-center">
 						<div class="awesome-feature-icon">
-							<span><i class="icofont icofont-light-bulb"></i></span>
+							<span><i class="icofont icofont-macbook"></i></span>
 						</div>
 						<div class="awesome-feature-details">
-							<h5>Creative Design</h5>
+							<h5>Dig deep into concepts of devops</h5>
 							<p>To learn about Data Structures and Algorithms and improve your problem-solving ability
 							</p>
 						</div>
@@ -227,50 +492,11 @@
 				<div class="col-md-4 hidden-sm">
 					<div class="awesome-feature text-center">
 						<div class="awesome-feature-icon">
-							<span><i class="icofont icofont-code"></i></span>
+							<span><i class="icofont icofont-code-alt"></i></span>
 						</div>
 						<div class="awesome-feature-details">
-							<h5>Clean Code</h5>
+							<h5>Two devzone sessions</h5>
 							<p>To learn how to use Exception Handling in Java applications
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="awesome-feature text-center">
-						<div class="awesome-feature-icon">
-							<span><i class="icofont icofont-ui-video-chat"></i></span>
-						</div>
-						<div class="awesome-feature-details">
-							<h5>Full Free Video Call</h5>
-							<p>To learn how to find out the defects as well as errors that we can't recognize during the
-								development of S/W
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="awesome-feature text-center">
-						<div class="awesome-feature-icon">
-							<span><i class="icofont icofont-ui-head-phone"></i></span>
-						</div>
-						<div class="awesome-feature-details">
-							<h5>Great Support</h5>
-							<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem stand
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 hidden-sm">
-					<div class="awesome-feature text-center">
-						<div class="awesome-feature-icon">
-							<span><i class="icofont icofont-heart"></i></span>
-						</div>
-						<div class="awesome-feature-details">
-							<h5>Unlimited Features</h5>
-							<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem stand
 							</p>
 						</div>
 					</div>
@@ -280,340 +506,135 @@
 	</section>
 	<!-- Feature feature area end -->
 	<!-- How it work start -->
-	<section class="how-work-area pt-130 pb-125 bg-1">
+	<section id="schedule" class="how-work-area pt-130 pb-125 bg-1" style="padding-left: 3%; padding-right: 3%;">
+
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
-					<div class="how-work-right text-center">
-						<img src="img/other/work.png" alt="" />
+				<div class="col-md-12 col-sm-12">
+					<div class="section-heading pb-55 text-center">
+						<h2>Timeline</h2>
+						<p style="margin-bottom: 10%;">Lorem Ipsum is slechts een proeftekst uit het drukkerij- en
+							zetterijwezen. Lorem Ipsum is de
+							standaard proeftekst in deze bedrijfstak sinds.</p>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<div class="how-work-left mt-90">
-						<h2>How It Work?</h2>
-						<div class="how-work-tab mt-55">
-							<ul>
-								<li class="active"><a data-toggle="tab" href="#home">1. Download</a></li>
-								<li><a data-toggle="tab" href="#menu1">2. Install</a></li>
-								<li><a data-toggle="tab" href="#menu2">3. Run</a></li>
-							</ul>
-							<div class="tab-content">
-								<div id="home" class="mt-45 tab-pane fade in active">
-									<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en bnzetterijwezen.
-										Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16esss eeuw,
-										toen een onbekende drukker een zethaak met letters nam en ze husselde om een
-										font-catalogus te maken. </p>
-									<p>overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronischess
-										letterzetting. Het is in de jaren '60 populair geworden met de introductie van
-										Letraset vellen Lorem Ipsum passages.</p>
-								</div>
-								<div id="menu1" class="mt-45 tab-pane fade">
-									<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en bnzetterijwezen.
-										Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16esss eeuw,
-										toen een onbekende drukker een zethaak met letters nam en ze husselde om een
-										font-catalogus te maken. </p>
-									<p>overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronischess
-										letterzetting. Het is in de jaren '60 populair geworden met de introductie van
-										Letraset vellen Lorem Ipsum passages.</p>
-								</div>
-								<div id="menu2" class="mt-45 tab-pane fade">
-									<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en bnzetterijwezen.
-										Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16esss eeuw,
-										toen een onbekende drukker een zethaak met letters nam en ze husselde om een
-										font-catalogus te maken. </p>
-									<p>overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronischess
-										letterzetting. Het is in de jaren '60 populair geworden met de introductie van
-										Letraset vellen Lorem Ipsum passages.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+			</div>
+			<!--first section-->
+			<div class="row align-items-center how-it-works">
+				<div class="col-2 text-center bottom">
+					<div class="circle">1</div>
+				</div>
+				<div class="col-10">
+					<h5>Session one - 18 th September</h5>
+					<p>Presenter : <b style="color: #999999; font-weight: 700;"> qwqwed </b><br> Topic : <b
+							style="color: #999999; font-weight: 700;">Introduction to
+							DevOp</b></p>
+				</div>
+			</div>
+			<!--path between 1-2-->
+			<div class="row timeline">
+				<div class="col-2">
+					<div class="corner top-right"></div>
+				</div>
+				<div class="col-8">
+					<hr />
+				</div>
+				<div class="col-2">
+					<div class="corner left-bottom"></div>
+				</div>
+			</div>
+
+			<!--second section-->
+			<div class="row align-items-center justify-content-end how-it-works">
+				<div class="col-10 text-right" style="padding-top: 2%;">
+					<h5>Session two - 25 th September</h5>
+					<p>Presenter : <b style="color: #999999; font-weight: 700;"> qwqwed </b> <br> Topic : <b
+							style="color: #999999; font-weight: 700;">Deep into DevOps</b>
+					</p>
+				</div>
+				<div class="col-2 text-center full">
+					<div class="circle">2</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- How it work End -->
 	<!-- fun fact area start -->
-	<section class="funfact-area bg-2 pt-125 pb-130">
+	<section class="funfact-area bg-4 pt-125 pb-130">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="single-fact text-center">
-						<h2 class="counter">200</h2>
-						<h5>Downloads</h5>
+						<h5 style="padding: 10%;">Date</h5>
+						<h4 class="details2">18 th September 2021</h4>
+						<h4 class="details2">25 th September 2021</h4>
 					</div>
+					<hr class="details">
 				</div>
 				<div class="col-sm-3">
 					<div class="single-fact text-center">
-						<h2 class="counter">1000</h2>
-						<h5>Active Installs</h5>
+						<h5 style="padding: 10%;">Time</h5>
+						<h4 class="details2">06.30 PM onwards </h4>
 					</div>
+					<hr class="details">
+
 				</div>
 				<div class="col-sm-3">
 					<div class="single-fact text-center">
-						<h2 class="counter">80</h2>
-						<h5>Happy Clients</h5>
+						<h5 style="padding: 10%;">Platform</h5>
+						<h4 class="details2">ZOOM</h4>
 					</div>
+					<hr class="details">
+
 				</div>
 				<div class="col-sm-3">
 					<div class="single-fact text-center">
-						<h2 class="counter">100</h2>
-						<h5>Total App Rat</h5>
+						<h5 style="padding: 10%;">Target audience</h5>
+						<h4 class="details2">Undergraduartes of all the universities</h4>
 					</div>
+					<hr class="details">
+
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- fun fact area end -->
-	<!-- app screenshot area start -->
-	<section class="screenshot-area pt-130 pb-130">
+	<!-- About area start -->
+	<section id="speaker" class="about-area pt-125" style="padding-bottom: 5%;">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="section-heading pb-55 text-center">
-						<h2>App Screenshots</h2>
-						<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de
-							standaard proeftekst in deze bedrijfstak sinds.</p>
+			<div class="row" style=" display: flex; justify-content: center; align-items: center; ">
+				<div class="col-md-6">
+					<!-- <center class="center-speaker"> -->
+					<div class="about-content">
+						<h2>Key Speaker</h2>
+						<p>Mr. Dinanjana Gunaratne is currently working as an Associate Technical Lead at Different Pvt
+							Ltd. His role has been full-stack engineering where he works with backend, frontend, and
+							infrastructure levels. He has 4 years of experience as a Software Engineer and a Senior
+							Software Engineer at Sysco LABS PVT Ltd. Also has one year of experience at a Netherland
+							startup, Fixico with Gapstars PVT ltd. He holds a BSc. Eng in Computer Engineering from the
+							University of Peradeniya. His main tech stacks are Java, Javascript, NodeJS, MySql, MongoDB,
+							Spring and React.
+						</p>
 					</div>
+					<!-- </center> -->
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-xs-12">
-					<div class="screenshot-slider">
-						<div class="single-screenshot">
-							<div class="image">
-								<img src="img/screenshot/1.png" alt="">
-							</div>
-						</div>
-						<div class="single-screenshot">
-							<div class="image">
-								<img src="img/screenshot/2.png" alt="">
-							</div>
-						</div>
-						<div class="single-screenshot">
-							<div class="image">
-								<img src="img/screenshot/3.png" alt="">
-							</div>
-						</div>
-						<div class="single-screenshot">
-							<div class="image">
-								<img src="img/screenshot/4.png" alt="">
-							</div>
-						</div>
-						<div class="single-screenshot">
-							<div class="image">
-								<img src="img/screenshot/5.png" alt="">
-							</div>
-						</div>
+				<div class="col-md-6">
+					<div class="about-img speaker-image">
+						<img src="img/team/7.png" alt="">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- app screenshot area end -->
-	<!-- Download Area Start -->
-	<section class="download-area bg-3 ptb-130">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="section-heading text-center pb-45">
-						<h2>Download Now Available</h2>
-						<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de
-							standaard proeftekst in deze bedrijfstak sinds.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="download-option-btn text-center">
-						<ul>
-							<li>
-								<a href="#"><i class="icofont icofont-brand-apple"></i> App Store</a>
-								<a class="active" href="#"><i class="icofont icofont-brand-windows"></i> Windows
-									store</a>
-								<a href="#"><i class="icofont icofont-brand-android-robot"></i> Android</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Download Area End -->
-	<!-- Pricing Plan Area Start -->
-	<section id="pricing" class="pricing-area pt-130 pb-100">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="section-heading pb-55 text-center">
-						<h2>Pricing Plan</h2>
-						<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de
-							standaard proeftekst in deze bedrijfstak sinds.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-6">
-					<div class="pricing-single white-bg text-center mb-30">
-						<div class="price-titel uppercase">
-							<h4>BASIC</h4>
-						</div>
-						<div class="pricing-price">
-							<span>40</span>
-						</div>
-						<div class="price-decs">
-							<ul>
-								<li>Five Website</li>
-								<li>Five User</li>
-								<li>100 GB Bandwidth</li>
-								<li>2 GB Storage</li>
-							</ul>
-						</div>
-						<div class="ordr-btn uppercase">
-							<a href="#">Purchase Now</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<div class="pricing-single active white-bg text-center mb-30">
-						<div class="price-titel uppercase">
-							<h4>STANDERD</h4>
-						</div>
-						<div class="pricing-price">
-							<span>50</span>
-						</div>
-						<div class="price-decs">
-							<ul>
-								<li>20 Website</li>
-								<li>20 User</li>
-								<li>200 GB Bandwidth</li>
-								<li>20 GB Storage</li>
-							</ul>
-						</div>
-						<div class="ordr-btn uppercase">
-							<a href="#">Purchase Now</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 hidden-sm">
-					<div class="pricing-single white-bg text-center mb-30">
-						<div class="price-titel uppercase">
-							<h4>UNLIMITED</h4>
-						</div>
-						<div class="pricing-price">
-							<span>60</span>
-						</div>
-						<div class="price-decs">
-							<ul>
-								<li>Unlimited Website</li>
-								<li>Unlimited User</li>
-								<li>Unlimited Bandwidth</li>
-								<li>Unlimited Storage</li>
-							</ul>
-						</div>
-						<div class="ordr-btn uppercase">
-							<a href="#">Purchase Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Pricing Plan Area End -->
-	<!-- Testimonial Area Start -->
-	<section id="client" class="testimonial-area pt-120 pb-130 bg-4">
-		<div class="container">
-			<div class="row">
-				<div class="testimonial-active owl-carousel">
-					<div class="col-md-12">
-						<div class="testimonial-desc text-center">
-							<p>Mauris pharetra eget turpis at gravida. Praesent diam neque, varius at mi eget, molestie
-								scelerisque eros. Quisque eget nunc et ligula interdum finibus. Nullam id tincidunt
-								metus, </p>
-							<h4>Sathi Bhuiyan</h4>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="testimonial-desc text-center">
-							<p>Mauris pharetra eget turpis at gravida. Praesent diam neque, varius at mi eget, molestie
-								scelerisque eros. Quisque eget nunc et ligula interdum finibus. Nullam id tincidunt
-								metus, </p>
-							<h4>Al Mamun</h4>
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="testimonial-desc text-center">
-							<p>Mauris pharetra eget turpis at gravida. Praesent diam neque, varius at mi eget, molestie
-								scelerisque eros. Quisque eget nunc et ligula interdum finibus. Nullam id tincidunt
-								metus, </p>
-							<h4>Salim Rana</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Testimonial Area End -->
-	<!-- Team Area Start -->
-	<section id="team" class="team-area ptb-130">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="section-heading pb-55 text-center">
-						<h2>Lovely Team Member</h2>
-						<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de
-							standaard proeftekst in deze bedrijfstak sinds.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 col-sm-6">
-					<div class="team-single">
-						<img src="img/team/1.png" alt="" />
-						<div class="team-overlay text-center">
-							<h5>Sathi Bhuiyan</h5>
-							<h6>Lovely Designer</h6>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="team-single">
-						<img src="img/team/2.png" alt="" />
-						<div class="team-overlay text-center">
-							<h5>Sathi Bhuiyan</h5>
-							<h6>Lovely Designer</h6>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="team-single">
-						<img src="img/team/3.png" alt="" />
-						<div class="team-overlay text-center">
-							<h5>Sathi Bhuiyan</h5>
-							<h6>Lovely Designer</h6>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="team-single">
-						<img src="img/team/4.png" alt="" />
-						<div class="team-overlay text-center">
-							<h5>Sathi Bhuiyan</h5>
-							<h6>Lovely Designer</h6>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Team Area End -->
-	<!-- Subcribe Area Start -->
-	<section class="subcribe-area pt-130 pb-115 bg-6">
+	<!-- About area End -->
+
+	<!-- Contact Area Start -->
+	<div id="contact" class="contact-area pt-130 pb-115 bg-3">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="section-heading pb-35 text-center">
-						<h2>Subscribe a free update</h2>
+						<h2>Contact us</h2>
 						<p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de
 							standaard proeftekst in deze bedrijfstak sinds.</p>
 					</div>
@@ -621,105 +642,69 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="subcribe-form text-center">
-						<form id="mc-form">
-							<input autocomplete="off" placeholder="Enter Your Email" type="text">
-							<button type="submit">Subscribe</button>
-							<!-- mailchimp-alerts Start -->
-							<div class="mailchimp-alerts text-centre">
-								<div class="mailchimp-submitting"></div>
-								<div class="mailchimp-success"></div>
-								<div class="mailchimp-error"></div>
-							</div>
-							<!-- mailchimp-alerts end -->
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Subcribe Area End -->
-	<!-- Contact Area Start -->
-	<div id="contact" class="contact-area pt-130">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
 					<!-- Contact Form -->
 					<div class="contact-form">
-						<form class="form" name="enq" method="post" action="http://preview.hasthemes.com/moto/mail.php">
+						<form class="form" name="enq" method="post" action="https://formspree.io/f/myyllrgj"
+							method="POST">
 							<div class="row">
 								<div class="form-group col-md-12">
 									<input type="text" name="name" class="form-control" id="first-name"
-										placeholder="Name" required="required">
+										placeholder="Name" required="required"
+										style="color: rgba(129, 126, 126, 0.897)">
 								</div>
 								<div class="form-group col-md-12">
-									<input type="email" name="email" class="form-control" id="email" placeholder="Email"
-										required="required">
+									<input input type="email" name="_replyto" class="form-control" id="email"
+										placeholder="Email" required="required"
+										style="color: rgba(129, 126, 126, 0.897)"">
 								</div>
-								<div class="form-group description col-md-12 mbnone">
+								<div class=" form-group description col-md-12 mbnone">
 									<textarea rows="3" name="message" class="form-control" id="description"
-										placeholder="Message" required="required"></textarea>
+										placeholder="Message" required="required"
+										style="color: rgba(129, 126, 126, 0.897)"></textarea>
 								</div>
-								<div class="col-md-12">
+								<div class="col-md-12" style="padding: 10%; padding-bottom: 0;">
 									<div class="actions text-center">
-										<input type="submit" value="SUBMIT" name="submit"
-											class="btn btn-lg btn-contact-bg" title="Submit Your Message!">
+										<input type="submit" class="btn btn-lg btn-contact-bg"
+											title="Submit Your Email!">
 									</div>
 								</div>
 							</div>
 						</form>
+
 					</div>
 					<!-- Contact Form -->
-					<!-- Google Map -->
-					<div class="google-map">
-						<div id="map"></div>
-					</div>
-					<!-- Google Map -->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Contact Area End -->
 	<!-- Copyright Area Start -->
-	<div class="copyright-area bg-5 ptb-65">
+	<div class="copyright-area bg-5 ptb-65" style="padding: 0;">
 		<div class="container">
 			<!-- Contact address left -->
 			<div class="row">
 				<div class="conct-border">
 					<div class="col-md-4 col-sm-4">
 						<div class="single-address">
-							<div class="media">
-								<div class="media-left">
-									<i class="icofont icofont-phone"></i>
-								</div>
-								<div class="media-body text-center">
-									<p>+012 345 678 102 <br> +012 345 678 102</p>
-								</div>
-							</div>
+
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div class="single-address">
 							<div class="media">
 								<div class="media-left">
-									<i class="icofont icofont-web"></i>
 								</div>
 								<div class="media-body text-center">
-									<p>urname@email.com <br> urwebsitenaem.com</p>
+									<div class="" style="padding-top: 10%; padding-bottom: 0;">
+										<img src="img/icon/logo.png" alt="" padding: 2%;" width="60%">
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-4">
 						<div class="single-address">
-							<div class="media">
-								<div class="media-left">
-									<i class="icofont icofont-social-google-map"></i>
-								</div>
-								<div class="media-body text-center">
-									<p>ur address goes here, <br> street,Crossroad123.</p>
-								</div>
-							</div>
+
 						</div>
 					</div>
 				</div>
@@ -730,30 +715,26 @@
 				<div class="col-md-12">
 					<div class="copyright-area text-center">
 						<!-- Copyright social -->
+						<div class="copyright-text">
+							<p>ORGANIZED BY <br> IEEE STUDENT BRANCH <br> GENERAL SIR JOHN KOTELAWALA DEFENCE UNIVERSITY
+							</p>
+						</div>
+						<!-- Copyright text -->
+						<!-- Copyright social -->
 						<div class="contact-social text-center pt-70 pb-35">
 							<ul>
 								<li>
 									<a href="#"><i class="icofont icofont-social-facebook"></i></a>
 								</li>
 								<li>
-									<a href="#"><i class="icofont icofont-social-twitter"></i></a>
+									<a href="#"><i class="icofont icofont-social-linkedin"></i></a>
 								</li>
 								<li>
-									<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+									<a href="#"><i class="icofont icofont-social-instagram"></i></a>
 								</li>
-								<li>
-									<a href="#"><i class="icofont icofont-social-vimeo"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icofont icofont-social-google-plus"></i></a>
-								</li>
+
 							</ul>
 						</div>
-						<!-- Copyright social -->
-						<div class="copyright-text">
-							<p>Copyright &copy; <a href="#"> Devitems. </a> All Rights Reserved.</p>
-						</div>
-						<!-- Copyright text -->
 					</div>
 				</div>
 			</div>
@@ -769,29 +750,117 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/plugins.js"></script>
+
 	<!-- map js -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
+
+	<script src="js/main.js"></script>
+
+
+	<script src="js/countdown.jquery.js"></script>
+
 	<script>
-		/*START CONTACT MAP JS*/
-		function initialize() {
-			var mapOptions = {
-				zoom: 12,
-				scrollwheel: false,
-				center: new google.maps.LatLng(43.538263, -80.305922)
-			};
-			var map = new google.maps.Map(document.getElementById('map'),
-				mapOptions);
-			var marker = new google.maps.Marker({
-				position: map.getCenter(),
-				icon: 'img/icon/map-icon.png',
-				map: map
+		const cd = new Date().getFullYear() + 1
+		// window.alert(cd);
+		$('#countdown').countdown({
+			year: 2021,
+			month: 9,
+			day: 18
+		});
+	</script>
+
+	<script>
+		function scrollTo2(className) {
+			const elementId = document.getElementById(className);
+			// julie.scrollIntoView(true);
+			elementId.scrollIntoView({
+				block: 'center',
 			});
 		}
-		google.maps.event.addDomListener(window, 'load', initialize);
-		   /*END CONTACT MAP JS*/
 	</script>
-	<script src="js/main.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+
+				if (scroll < 740) {
+					$(".sliderClass").css("opacity", "0.5");
+				}
+				else {
+					$(".sliderClass").css("opacity", "1");
+				}
+
+				if (scroll > 740 && scroll < 1390) {
+					$(".aboutClass").css("opacity", "0.5");
+				}
+				else {
+					$(".aboutClass").css("opacity", "1");
+				}
+
+				if (scroll > 1390 && scroll < 3100) {
+					$(".featuresClass").css("opacity", "0.5");
+				}
+				else {
+					$(".featuresClass").css("opacity", "1");
+				}
+
+				if (scroll > 3100 && scroll < 4000) {
+					$(".scheduleClass").css("opacity", "0.5");
+				}
+				else {
+					$(".scheduleClass").css("opacity", "1");
+				}
+
+				if (scroll > 4000 && scroll < 5200) {
+					$(".speakerClass").css("opacity", "0.5");
+				}
+				else {
+					$(".speakerClass").css("opacity", "1");
+				}
+
+				if (scroll > 5200) {
+					$(".constactClass").css("opacity", "0.5");
+				}
+				else {
+					$(".constactClass").css("opacity", "1");
+				}
+
+
+			})
+		})</script>
+
+	<script type="text/javascript">//<![CDATA[
+
+
+
+		$(document).ready(function () {
+			$('#headerVideoLink').magnificPopup({
+				type: 'inline',
+				midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+			});
+
+		});
+
+
+
+//]]></script>
+
+	<script>
+		// tell the embed parent frame the height of the content
+		if (window.parent && window.parent.parent) {
+			window.parent.parent.postMessage(["resultsFrame", {
+				height: document.body.getBoundingClientRect().height,
+				slug: "d1thm4cq"
+			}], "*")
+		}
+
+		// always overwrite window.name, in case users try to set it manually
+		window.name = "result"
+	</script>
 </body>
+
+
+
 
 <!-- Mirrored from preview.hasthemes.com/moto/animate-text-video-bg.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Sep 2021 18:19:57 GMT -->
 
