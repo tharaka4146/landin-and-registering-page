@@ -815,6 +815,7 @@
     <script>
         $(document).ready(function () {
             $(window).scroll(function () {
+
                 var scroll = $(window).scrollTop();
 
                 if (scroll < 740) {
@@ -845,14 +846,14 @@
                     $(".scheduleClass").css("opacity", "1");
                 }
 
-                if (scroll > 4000 && scroll < 5200) {
+                if (scroll > 4000 && scroll < 4900) {
                     $(".speakerClass").css("opacity", "0.5");
                 }
                 else {
                     $(".speakerClass").css("opacity", "1");
                 }
 
-                if (scroll > 5200) {
+                if (scroll > 4900) {
                     $(".constactClass").css("opacity", "0.5");
                 }
                 else {
